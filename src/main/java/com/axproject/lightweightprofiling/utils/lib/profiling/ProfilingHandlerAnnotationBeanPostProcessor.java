@@ -15,12 +15,12 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class ProfilingHandlerBeanPostProcessor implements BeanPostProcessor {
+public class ProfilingHandlerAnnotationBeanPostProcessor implements BeanPostProcessor {
 
     private Map<String, Class> map = new HashMap<>();
     private ProfileController controller = new ProfileController();
 
-    public ProfilingHandlerBeanPostProcessor() throws Exception{
+    public ProfilingHandlerAnnotationBeanPostProcessor() throws Exception{
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
         mBeanServer.registerMBean(controller, new ObjectName("profiling", "name", "controller"));
     }
@@ -59,6 +59,6 @@ public class ProfilingHandlerBeanPostProcessor implements BeanPostProcessor {
             });
         }
 
-        return null;
+        return bean;
     }
 }
