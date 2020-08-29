@@ -1,8 +1,6 @@
 package com.axproject.lightweightprofiling.controller;
 
-import com.axproject.lightweightprofiling.component.Profiling;
 import com.axproject.lightweightprofiling.component.ProfilingMethods;
-import com.axproject.lightweightprofiling.component.ProfilingMethodsComponentImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

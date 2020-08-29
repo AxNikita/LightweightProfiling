@@ -1,5 +1,6 @@
-package com.axproject.lightweightprofiling.utils.lib.profiling;
+package com.axproject.lightweightprofiling.utils.lib.profiling.annotation;
 
+import com.axproject.lightweightprofiling.utils.lib.profiling.ProfileController;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
@@ -15,20 +16,20 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class ProfilingHandlerAnnotationBeanPostProcessor implements BeanPostProcessor {
+public class ProfilingClassHandlerAnnotationBeanPostProcessor implements BeanPostProcessor {
 
     private Map<String, Class> map = new HashMap<>();
     private ProfileController controller = new ProfileController();
 
-    public ProfilingHandlerAnnotationBeanPostProcessor() throws Exception{
+    public ProfilingClassHandlerAnnotationBeanPostProcessor() throws Exception{
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
-        mBeanServer.registerMBean(controller, new ObjectName("profiling", "name", "controller"));
+        mBeanServer.registerMBean(controller, new ObjectName("profiling", "name", "profiling"));
     }
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         Class<?> beanClass = bean.getClass();
-        if (beanClass.isAnnotationPresent(Profile.class)) {
+        if (beanClass.isAnnotationPresent(ProfileClass.class)) {
             map.put(beanName, beanClass);
         }
         return bean;

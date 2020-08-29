@@ -1,10 +1,10 @@
 package com.axproject.lightweightprofiling.component;
 
-import com.axproject.lightweightprofiling.utils.lib.profiling.Profile;
+import com.axproject.lightweightprofiling.utils.lib.profiling.annotation.ProfileClass;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Profile
+@ProfileClass
 @Component
 public class ProfilingComponentImpl implements Profiling {
 

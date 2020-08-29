@@ -1,9 +1,8 @@
 package com.axproject.lightweightprofiling.component;
 
-import com.axproject.lightweightprofiling.utils.lib.profiling.ProfileMethod;
+import com.axproject.lightweightprofiling.utils.lib.profiling.annotation.ProfileMethod;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 @Component
 public class ProfilingMethodsComponentImpl implements ProfilingMethods {

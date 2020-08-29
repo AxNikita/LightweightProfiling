@@ -1,20 +1,13 @@
-package com.axproject.lightweightprofiling.utils.lib.profiling;
+package com.axproject.lightweightprofiling.utils.lib.profiling.annotation;
 
-import org.springframework.aop.support.AopUtils;
+import com.axproject.lightweightprofiling.utils.lib.profiling.ProfileController;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ReflectionUtils;
 
-import javax.management.MBeanServer;
-import javax.management.ObjectName;
-import java.lang.management.ManagementFactory;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Component
