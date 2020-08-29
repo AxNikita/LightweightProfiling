@@ -1,2 +1,7 @@
 server:
   port: 8989
+
+profile:
+  low: 1000
+  medium: 3000
+  hard: 10000

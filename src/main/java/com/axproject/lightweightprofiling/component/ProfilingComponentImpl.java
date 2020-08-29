@@ -1,15 +1,21 @@
 package com.axproject.lightweightprofiling.component;
 
-import org.springframework.scheduling.annotation.EnableAsync;
+import com.axproject.lightweightprofiling.utils.lib.profiling.Profile;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Profile
 @Component
-public class ProfilingComponent implements Profiling {
+public class ProfilingComponentImpl implements Profiling {
 
-    private long low = 100;
-    private long medium = 1000;
-    private long hard = 10000;
+    @Value("${profile.low}")
+    private long low;
+
+    @Value("${profile.medium}")
+    private long medium;
+
+    @Value("${profile.hard}")
+    private long hard;
 
     @Override
     public void lowProfiling() throws Exception{

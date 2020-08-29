@@ -1,4 +1,4 @@
-package com.axproject.lightweightprofiling.component;
+package com.axproject.lightweightprofiling.utils.lib.profiling;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

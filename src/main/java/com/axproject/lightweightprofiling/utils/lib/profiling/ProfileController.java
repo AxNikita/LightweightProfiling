@@ -1,8 +1,6 @@
-package com.axproject.lightweightprofiling.component;
+package com.axproject.lightweightprofiling.utils.lib.profiling;
 
-import org.springframework.stereotype.Component;
-
-public class ProfileController implements ProfileControllerMBean{
+public class ProfileController implements ProfileControllerMBean {
 
     private boolean enabled = true;
 
