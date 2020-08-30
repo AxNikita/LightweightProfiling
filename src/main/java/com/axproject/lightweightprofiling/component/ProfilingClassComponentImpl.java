@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @ProfileClass
 @Component
-public class ProfilingComponentImpl implements Profiling {
+public class ProfilingClassComponentImpl implements Profiling {
 
     @Value("${profile.low}")
     private long low;

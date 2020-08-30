@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 )
 public class ProfileController implements ProfileControllerMBean{
 
-    private boolean enabled = true;
+    private boolean enabled;
 
     public boolean isEnabled() {
         return enabled;
