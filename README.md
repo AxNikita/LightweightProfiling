@@ -53,9 +53,3 @@ public void lowProfiling() {
 ## Web приложение для профилирования
 
 Перейдите по ссылке http://localhost:8989/ , чтобы протестировать профилирование. 
-
-![log](src/main/resources/images/img4.PNG)
-
-![log](src/main/resources/images/img5.PNG)
-
-![log](src/main/resources/images/img6.PNG)
